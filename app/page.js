@@ -113,8 +113,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="text-center text-gray-500 mt-12">About / Other sections here</div>
       </div>
-    </div>
-  );
+    </div>
+  )
 }
