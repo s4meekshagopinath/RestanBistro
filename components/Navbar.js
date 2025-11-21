@@ -1,19 +1,32 @@
-"use client";
+'use client'
+import Link from "next/link"
+
 export default function Navbar() {
-    return (
-        <div className="w-full h-[70px] bg-[#3b2f2f] text-white flex items-center justify-between px-6 md:px-20">
-            <img src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=750&q=75" alt="Restan Bistro logo" className="h-[45px] w-auto"/>
+  return (
+    <header className="fixed w-full z-30">
+      <div className="bg-transparent">
+        <div className="max-w-6xl mx-auto px-6 md:px-10 flex items-center justify-between h-[72px]">
+          <div className="flex items-center gap-4">
+            <img src="https://orders.co/static/99a59eec0735fca313bf2b93349bd5d6/f659b/Italian-Restaurant-Design-Creating-an-Inviting-Ambiance.png" alt="logo" className="h-10 w-auto"/>
+            <div style={{fontWeight:700,fontSize:18,color:"#fff"}}>Restan Bistro</div>
+          </div>
 
-            <div className="hidden md:flex space-x-8 text-sm font-semibold">
-                <a href="/">Home</a>
-                <a href="/menu">Menu</a>
-                <a href="/about">About</a>
-                <a href="/contact">Contact us</a>
-            </div>
+          <nav className="hidden md:flex gap-8 text-white text-sm font-semibold">
+            <a href="#" className="hover:opacity-90">Home</a>
+            <a href="/menu" className="hover:opacity-90">Menu</a>
+            <a href="/about" className="hover:opacity-90">About</a>
+            <a href="/blog" className="hover:opacity-90">Blog</a>
+            <a href="/shop" className="hover:opacity-90">Shop</a>
+          </nav>
 
-            <button className="bg-[#a66a4a] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#8c563c]">
-                Book Table
-            </button>
+          <div className="flex items-center gap-3">
+            <Link href="/register">
+              <button className="px-4 py-2 rounded-full border border-[#ff8a00] text-[#ff8a00] hover:bg-[#ff8a00] hover:text-white transition">Register</button>
+            </Link>
+            <button className="md:hidden px-3 py-2 rounded bg-white/10 text-white">☰</button>
+          </div>
         </div>
-    )
+      </div>
+    </header>
+  )
 }
