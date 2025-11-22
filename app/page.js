@@ -1,159 +1,221 @@
-import Navbar from "../components/Navbar";
+import Items from "./components/Items";
+import Online from "./components/Online";
+import Opening from "./components/Opening";
+import Link from "next/link";
 
-export default function Home() {
-  const items = [
+export default function hotel(){
+  
+  const food = [
     {
-      id: 1,
-      name: "Truffle Pasta",
-      price: 699,
-      image:
-        "https://www.sprinklesandsprouts.com/wp-content/uploads/2018/11/Black-Truffle-Pasta3.jpg",
-      desc: "Creamy truffle tagliatelle."
+      img:"https://www.sprinklesandsprouts.com/wp-content/uploads/2018/11/Black-Truffle-Pasta3.jpg",
+      id:1,
+      title:"Truffle Pasta",
+      price:699,
+      desc:"Creamy truffle tagliatelle."
     },
     {
-      id: 2,
-      name: "Herb Chicken",
-      price: 549,
-      image:
-        "https://www.allrecipes.com/thmb/-UKM4NTWBZnLnkeOCh7ESmeTOcI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simple-Lemon-Herb-Chicken-2000-610e2f2a1e9a4ba292d775e72f3dc888.jpg",
-      desc: "Roasted chicken with fresh herbs."
+      img:"https://www.allrecipes.com/thmb/-UKM4NTWBZnLnkeOCh7ESmeTOcI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simple-Lemon-Herb-Chicken-2000-610e2f2a1e9a4ba292d775e72f3dc888.jpg",
+      id:2,
+      title:"Herb Chicken",
+      price:549,
+      desc:"Roasted chicken with fresh herbs."
     },
     {
-      id: 3,
-      name: "Fresh Mojito",
-      price: 199,
-      image:
-        "https://hips.hearstapps.com/hmg-prod/images/20191031-mojitos-three-ways-delish-ehg-2887-1584029660.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1200:*",
-      desc: "Lime, mint and soda."
+      img:"https://hips.hearstapps.com/hmg-prod/images/20191031-mojitos-three-ways-delish-ehg-2887-1584029660.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1200:*",
+      id:3,
+      title:"Fresh Mojito",
+      price:199,
+      desc:"Lime, mint and soda."
     },
     {
-      id: 4,
-      name: "BBQ Smash Burger",
-      price: 349,
-      image:
-        "https://www.licious.in/blog/wp-content/uploads/2022/08/shutterstock_574607542.jpg",
-      desc: "Smashed chicken patty, cheddar, onion tanglers, and smoky BBQ sauce."
+      img:"https://www.licious.in/blog/wp-content/uploads/2022/08/shutterstock_574607542.jpg",
+      id:4,
+      title:"BBQ Smash Burger",
+      price:349,
+      desc:"Smashed chicken patty, cheddar, onion tanglers, and smoky BBQ sauce."
     },
     {
-      id: 5,
-      name: "Caesar Salad",
-      price: 299,
-      image:
-        "https://bakerbynature.com/wp-content/uploads/2025/01/Caesar-Salad-9.jpg",
-      desc: "Crisp romaine with parmesan."
+      img:"https://bakerbynature.com/wp-content/uploads/2025/01/Caesar-Salad-9.jpg",
+      id:5,
+      title:"Caesar Salad",
+      price:299,
+      desc:"Crisp romaine with parmesan."
     },
     {
-      id: 6,
-      name: "Tiramisu",
-      price: 259,
-      image:
-        "https://bakewithzoha.com/wp-content/uploads/2025/06/tiramisu-featured.jpg",
-      desc: "Classic Italian dessert."
+      img:"https://bakewithzoha.com/wp-content/uploads/2025/06/tiramisu-featured.jpg",
+      id:6,
+      title:"Tiramisu",
+      price:259,
+      desc:"Classic Italian dessert."
     }
-  ];
+  ]
+
+  const service = [
+    {
+      img:"https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Ficon%2F13.png&w=640&q=75",
+      id:1,
+      title:"Quality Foods",
+      p:"Belonging sir curiosity discovery extremity yet forfeited prevailed own off.",
+      p1:" Traveling by introduced of mr terminated"
+    },
+    {
+      img:"https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Ficon%2F14.png&w=640&q=75",
+      id:2,
+      title:"Fast Delivery",
+      p:"Belonging sir curiosity discovery extremity yet forfeited prevailed own off.",
+      p1:" Traveling by introduced of mr terminated",
+    },
+    {
+      img:"https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Ficon%2F15.png&w=640&q=75",
+      id:3,
+      title:"Delicious Recipes",
+      p:"Belonging sir curiosity discovery extremity yet forfeited prevailed own off.",
+      p1:" Traveling by introduced of mr terminated.",
+    }
+  ]
 
   return (
-    <div className="min-h-screen bg-white text-gray-800">
-      <Navbar />
-
-      <header className="relative h-screen md:h-[88vh] bg-cover bg-center">
-        <div className="absolute inset-0">
-          <img
-            src="https://orders.co/static/99a59eec0735fca313bf2b93349bd5d6/f659b/Italian-Restaurant-Design-Creating-an-Inviting-Ambiance.png"
-            alt="hero"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
-        </div>
-
-        <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center">
-          <div className="max-w-4xl">
-            <h1 className="text-white text-3xl md:text-6xl font-bold leading-tight">
-              Delicious Food and Fine Dining Experience
-            </h1>
-            <p className="text-white/90 mt-4 text-sm md:text-lg">
-              A cozy dining experience with delicious flavors and aesthetic ambience
-            </p>
-
-            <div className="mt-8 flex gap-4 justify-center">
-              <a
-                href="/menu"
-                className="px-6 py-3 rounded-full bg-[#ff8a00] hover:bg-[#e27400] text-white font-semibold"
-              >
-                View Menu
-              </a>
-              <a
-                href="#book"
-                className="px-6 py-3 rounded-full border border-white text-white font-semibold bg-white/10"
-              >
-                Book Table
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <main className="max-w-6xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-semibold text-center mb-8">Featured Dishes</h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((it) => (
-            <div key={it.id} className="rounded-xl overflow-hidden border bg-white shadow-sm">
-              <div className="w-full h-48 overflow-hidden">
-                <img src={it.image} alt={it.name} className="w-full h-full object-cover" />
-              </div>
-              <div className="p-4">
-                <div className="flex items-start justify-between">
-                  <h3 className="font-semibold text-lg">{it.name}</h3>
-                  <div className="text-sm font-medium">₹{it.price}</div>
-                </div>
-                <p className="text-sm text-gray-600 mt-2">{it.desc}</p>
-                <div className="mt-4 flex gap-2">
-                  <button className="px-3 py-1 rounded bg-black text-white">Add</button>
-                  <button className="px-3 py-1 rounded border">Details</button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <section className="mt-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-3xl font-semibold mb-4">Opening Hours</h3>
-              <p className="text-gray-600 mb-4">
-                A relaxing and pleasant atmosphere, good jazz, dinner, and cocktails. The Patio Time Bar opens in the center.
-              </p>
-              <ul className="text-gray-700 space-y-2">
-                <li className="flex justify-between border-b pb-2">Sunday - Tuesday <span className="font-medium">10:00 - 21:00</span></li>
-                <li className="flex justify-between border-b pb-2">Wednesday - Thursday <span className="font-medium">11:30 - 22:00</span></li>
-                <li className="flex justify-between">Friday - Saturday <span className="font-medium">12:00 - 23:00</span></li>
-              </ul>
-            </div>
-
-            <div className="h-64 bg-cover bg-center rounded-lg shadow" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541542684-0a1d12a2d4d6?auto=format&fit=crop&w=1200&q=60')" }} />
-          </div>
-        </section>
-
-        <section className="mt-16 text-center">
-          <h3 className="text-3xl font-semibold mb-6">About</h3>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            Restan Bistro is dedicated to serving delicious, carefully crafted dishes in a warm and elegant setting. We use fresh ingredients and traditional techniques to bring out bold flavors that keep guests coming back.
-          </p>
-        </section>
-      </main>
-
-      <footer className="bg-gray-900 text-white py-8 mt-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="text-center md:text-left">
-              <img src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=750&q=75" alt="Restan" className="h-10 mx-auto md:mx-0" />
-              <p className="text-sm mt-3 text-gray-300">© {new Date().getFullYear()} Restan Bistro. All rights reserved.</p>
-            </div>
-            <div className="text-sm text-gray-300">Contact: +91 9483657402</div>
-          </div>
-        </div>
-      </footer>
+   <div className="relative bg-contain bg-center h-[500px] rounded-3xl md:h-[800px] w-full " style={{
+      backgroundImage: "url('https://orders.co/static/99a59eec0735fca313bf2b93349bd5d6/f659b/Italian-Restaurant-Design-Creating-an-Inviting-Ambiance.png')"
+    }}>
+   
+    <div className=" flex items-center px-5 mx-5 space-x-4 pt-3">
+      <h2 className=" text-sm hidden md:block text-lg text-white font-semibold bg-none">Phone: ‪+4733378901‬</h2>
+      <h2 className=" text-sm hidden md:block text-lg text-white font-semibold bg-none">Email: food@restan.com</h2>
+      <h2 className=" text-sm hidden md:block text-lg text-white font-semibold bg-none ml-[600px]">175 10h Street, Office 375 Berlin, De 21562</h2>
     </div>
+    <hr className="border-1 border-white mt-2"></hr>
+    <div className="flex mt-8 ">
+      <div  className="flex ml-[80px] space-x-5 ">
+      <select className="hidden md:block text-lg font-semibold text-white border-black-1">
+        <option>Home</option>
+        </select>
+        
+        <Link href="/About">
+        <button className="hidden md:block text-lg font-semibold text-white border-black-1">About us</button>
+        </Link>
+        
+         
+        <Link href="/Menu">
+        <button className="hidden md:block text-lg font-semibold text-white border-black-1">Menu</button>
+        </Link>
+        <Link href="/Login">
+        <button className="hidden md:block text-lg font-semibold text-white border-black-1">Login</button>
+        </Link>
+        </div>
+        <div className="absolute left-1/2 ">
+        <img  className={"h-[80px] w-[150px]   mt-[10px] ml-[-50px] "}src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=1920&q=75"></img>
+        </div>
+        <div className="flex ml-[700px] space-x-5">
+         <select className="hidden md:block text-lg font-semibold text-white border-black-1 ">
+        <option>Shop</option>
+        <option className="text-gray-400">Shop single</option>
+        <option className="text-gray-400">Shop single two</option>
+        <option className="text-gray-400">Cart</option>
+        </select>
+        <select className="hidden md:block text-lg font-semibold text-white border-black-1 ">
+        <option>Contact us</option>
+        </select>
+         <select className="hidden md:block text-lg font-semibold text-white border-black-1">
+        <option>Blog</option>
+      </select>
+      </div>
+    </div>
+    <div className=" text-4xl md:text-8xl text-white font-semibold flex items-center justify-center  mt-[150px] md:mt-[200px] ">
+      Best Restaurant
+    </div>
+    <div className="flex items-center justify-center mt-5 md:mt-15">
+    <div className="rounded-full border-2 border-white w-40 h-40 text-xl text-white font-semibold flex items-center justify-center pl-1.5 hover:bg-black hover:text-white">
+      Best Food Since - 1865
+    </div>
+    </div>
+
+    <div className="hidden md:block h-30 w-30 border-2 border-gray-300 rounded-full ml-[200px] absolute bottom-30">
+      <img  className="hidden md:block h-30 w-30 border-2 border-gray-300 rounded-full " src="https://t3.ftcdn.net/jpg/05/53/00/78/360_F_553007886_vpgBDlwAyAaCTABowvIaPMPg437haVKR.jpg"></img>
+    </div>
+     
+
+    <div className="flex md:space-x-[500px]  ">
+      <div className=" flex flex-col h-[450px] w-350 md:w-[400px] border-2 border-gray-300 bg-white text-black pb-[50px] space-y-5 p-2 mt-[100px] md:mt-2.5 rounded-4xl ml-5 md:ml-15">
+        <div className=" text-black text-3xl font-semibold">
+          <h2 className="mt-9 flex items-center justify-center">Book a table</h2>
+        </div>
+        <input className="text-black border-2 border-gray-300 rounded-3xl p-2 mt-2" placeholder="Name" type="text"></input>
+        <select className="text-black border-2 border-gray-300 rounded-3xl p-2">
+          <option>1 person</option>
+          <option>2 person</option>
+          <option>3 person</option>
+          <option>4 person</option>
+          <option>5 person</option>
+          <option>6 person</option>
+        </select>
+        <input className="text-black border-2 border-gray-300 rounded-3xl p-2" placeholder="Date" type="date"></input>
+        <select className="text-black border-2 border-gray-300 rounded-3xl p-2" >
+          <option>10:00 am</option>
+          <option>11:00 am</option>
+          <option>12:00 am</option>
+          <option>1:00 am</option>
+          <option>2:00 am</option>
+        </select>
+        <button className="bg-amber-500 text-black border-2 border-gray-300 rounded-3xl p-2 mt-3 hover:bg-black hover:text-white">Book now!</button>
+      </div>
+
+      <div>
+        <h2 className=" text-5xl dark:text-white text-black font-semibold absolute top-[800px] md:mt-5 mt-[200px] ml-[-350px]  ">Our popular category </h2>
+      </div>
+
+      <div className="flex absolute md:top-[900px] top-[1100px] ml-[10px] md:ml-[700px]  ">
+        {
+          food.map(food=>(
+            <div key={food.id}>
+              <img src={food.img} className="h-[300px] w-[400px] md:h-[200px] md:w-[300px] p-3"></img>
+              <h2>{food.title}</h2>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div className="flex flex-col  md:flex-row  mt-[500px] md:mt-[100px] space-y-20 md:space-x-60 pl-8  ">
+      {
+          service.map(service=>(
+              <div key={service.id}>
+                  <img src={service.img} className="h-[100px] w-[100px]"></img>
+                  <h2 className="text-xl w-full ">{service.title}</h2>
+                  <p>{service.p}</p>
+                  <p>{service.p1}</p>
+              </div>
+          ))
+      }
+    </div>
+
+    <div className="h-[800px] md:h-[500px] w-full md:w-[1050px] border-2 border-gray-200 bg-amber-500 rounded-3xl  md:ml-[250px] mt-12 md:flex space-x-16">
+      <div className="items-center">
+        <img src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fillustration%2F1.png&w=1080&q=75" className="w-[100px] h-[60px] md:h-[150px] pl-2.5"></img>
+        <img src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fillustration%2F15.png&w=1080&q=75" className="mr-[200px] w-[1000px] md:w-[400px] pl-1.5 h-[250px] md:h-[300px]  md:pl-15"></img>
+      </div>
+      <div className="items-center">
+        <h2 className="text-black text-5xl font-semibold w-full  mt-20 ">Explore Irresistible Promotions!</h2>
+        <p className="text-sm mt-5">Contrasted dissimilar get joy you instrument out reasonably. Again keeps at no meant stuff.<br></br> To perpetual do existence northward as difficult preserved daughters. Continued at up to zealously necessary.</p>
+      </div>
+    </div>
+
+    <button className="md:ml-[750px] ml-[30px]  absolute mt-[-140px]  md:top-[1950px] border-2 border-gray-300 p-3 hover:bg-black hover:text-white rounded-3xl bg-amber-700">Order today</button>
+
+    <div>
+      <p className="text-amber-800 text-center mt-5 text-3xl">Food Menu</p>
+      <p className="text-5xl font-semibold text-center mt-1.5">Our Specials Menu</p>
+      <div className="h-[80px] w-[200px] md:w-[700px] border-2 border-black flex items-center justify-center text-3xl ml-[120px] md:ml-[450px] rounded-xl mt-3 p-2.5">
+        <a className="md:pl-5">Beverages</a>
+        <a className="hidden md:block pl-5">Main dishes</a>
+        <a className=" hidden md:block pl-5">Deserts</a>
+        <a className="hidden md:block pl-5">Sea food</a>
+      </div>
+    </div>
+
+    <Items />
+    <Online />
+    <Opening /> 
+  </div>
   );
 }
