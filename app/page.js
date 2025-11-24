@@ -1,6 +1,6 @@
-import Items from "./components/Items";
-import Online from "./components/Online";
-import Opening from "./components/Opening";
+import Items from "../components/Items";
+import Online from "../components/Online";
+import Opening from "../components/Opening";
 import Link from "next/link";
 
 export default function hotel(){
@@ -14,36 +14,22 @@ export default function hotel(){
       desc:"Creamy truffle tagliatelle."
     },
     {
-      img:"https://www.allrecipes.com/thmb/-UKM4NTWBZnLnkeOCh7ESmeTOcI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simple-Lemon-Herb-Chicken-2000-610e2f2a1e9a4ba292d775e72f3dc888.jpg",
-      id:2,
-      title:"Herb Chicken",
-      price:549,
-      desc:"Roasted chicken with fresh herbs."
-    },
-    {
       img:"https://hips.hearstapps.com/hmg-prod/images/20191031-mojitos-three-ways-delish-ehg-2887-1584029660.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1200:*",
-      id:3,
+      id:2,
       title:"Fresh Mojito",
       price:199,
       desc:"Lime, mint and soda."
     },
     {
-      img:"https://www.licious.in/blog/wp-content/uploads/2022/08/shutterstock_574607542.jpg",
-      id:4,
-      title:"BBQ Smash Burger",
-      price:349,
-      desc:"Smashed chicken patty, cheddar, onion tanglers, and smoky BBQ sauce."
-    },
-    {
       img:"https://bakerbynature.com/wp-content/uploads/2025/01/Caesar-Salad-9.jpg",
-      id:5,
+      id:3,
       title:"Caesar Salad",
       price:299,
       desc:"Crisp romaine with parmesan."
     },
     {
       img:"https://bakewithzoha.com/wp-content/uploads/2025/06/tiramisu-featured.jpg",
-      id:6,
+      id:4,
       title:"Tiramisu",
       price:259,
       desc:"Classic Italian dessert."
@@ -80,57 +66,57 @@ export default function hotel(){
     }}>
    
     <div className=" flex items-center px-5 mx-5 space-x-4 pt-3">
-      <h2 className=" text-sm hidden md:block text-lg text-white font-semibold bg-none">Phone: ‪+4733378901‬</h2>
-      <h2 className=" text-sm hidden md:block text-lg text-white font-semibold bg-none">Email: food@restan.com</h2>
-      <h2 className=" text-sm hidden md:block text-lg text-white font-semibold bg-none ml-[600px]">175 10h Street, Office 375 Berlin, De 21562</h2>
+      <h2 className=" text-sm hidden md:block text-lg !text-white font-semibold bg-none">Phone: ‪+4733378901‬</h2>
+      <h2 className=" text-sm hidden md:block text-lg !text-white font-semibold bg-none">Email: food@restan.com</h2>
+      <h2 className=" text-sm hidden md:block text-lg !text-white font-semibold bg-none ml-[600px]">175 10h Street, Office 375 Berlin, De 21562</h2>
     </div>
     <hr className="border-1 border-white mt-2"></hr>
     <div className="flex mt-8 ">
       <div  className="flex ml-[80px] space-x-5 ">
-      <select className="hidden md:block text-lg font-semibold text-white border-black-1">
+      <select className="hidden md:block text-lg font-semibold !text-white border-black-1">
         <option>Home</option>
         </select>
         
         <Link href="/About">
-        <button className="hidden md:block text-lg font-semibold text-white border-black-1">About us</button>
+        <button className="hidden md:block text-lg font-semibold !text-white border-black-1">About us</button>
         </Link>
         
          
         <Link href="/Menu">
-        <button className="hidden md:block text-lg font-semibold text-white border-black-1">Menu</button>
+        <button className="hidden md:block text-lg font-semibold !text-white border-black-1">Menu</button>
         </Link>
         <Link href="/Login">
-        <button className="hidden md:block text-lg font-semibold text-white border-black-1">Login</button>
+        <button className="hidden md:block text-lg font-semibold !text-white border-black-1">Login</button>
         </Link>
         </div>
         <div className="absolute left-1/2 ">
         <img  className={"h-[80px] w-[150px]   mt-[10px] ml-[-50px] "}src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=1920&q=75"></img>
         </div>
         <div className="flex ml-[700px] space-x-5">
-         <select className="hidden md:block text-lg font-semibold text-white border-black-1 ">
+         <select className="hidden md:block text-lg font-semibold !text-white border-black-1 ">
         <option>Shop</option>
         <option className="text-gray-400">Shop single</option>
         <option className="text-gray-400">Shop single two</option>
         <option className="text-gray-400">Cart</option>
         </select>
-        <select className="hidden md:block text-lg font-semibold text-white border-black-1 ">
+        <select className="hidden md:block text-lg font-semibold !text-white border-black-1 ">
         <option>Contact us</option>
         </select>
-         <select className="hidden md:block text-lg font-semibold text-white border-black-1">
+         <select className="hidden md:block text-lg font-semibold !text-white border-black-1">
         <option>Blog</option>
       </select>
       </div>
     </div>
-    <div className=" text-4xl md:text-8xl text-white font-semibold flex items-center justify-center  mt-[150px] md:mt-[200px] ">
-      Best Restaurant
+    <div className=" text-4xl md:text-8xl text-center !text-white font-semibold flex items-center justify-center  mt-[150px] md:mt-[200px] ">
+       Delicious Food with Best Dining Experience
     </div>
     <div className="flex items-center justify-center mt-5 md:mt-15">
-    <div className="rounded-full border-2 border-white w-40 h-40 text-xl text-white font-semibold flex items-center justify-center pl-1.5 hover:bg-black hover:text-white">
-      Best Food Since - 1865
+    <div className="rounded-full border-2 border-white w-40 h-40 text-xl text-center !text-white font-semibold flex items-center justify-center pl-1.5 hover:bg-black hover:text-white">
+       Best Food Since - 1865
     </div>
     </div>
 
-    <div className="hidden md:block h-30 w-30 border-2 border-gray-300 rounded-full ml-[200px] absolute bottom-30">
+    <div className="hidden md:block h-30 w-30 border-2 border-gray-300 rounded-full ml-[150px] absolute bottom-1">
       <img  className="hidden md:block h-30 w-30 border-2 border-gray-300 rounded-full " src="https://t3.ftcdn.net/jpg/05/53/00/78/360_F_553007886_vpgBDlwAyAaCTABowvIaPMPg437haVKR.jpg"></img>
     </div>
      
@@ -200,7 +186,7 @@ export default function hotel(){
       </div>
     </div>
 
-    <button className="md:ml-[750px] ml-[30px]  absolute mt-[-140px]  md:top-[1950px] border-2 border-gray-300 p-3 hover:bg-black hover:text-white rounded-3xl bg-amber-700">Order today</button>
+    <button className="md:ml-[750px] ml-[30px]  absolute mt-[-140px]  md:top-[2200px] border-2 border-gray-300 p-3 hover:bg-black hover:text-white rounded-3xl bg-amber-700">Order today</button>
 
     <div>
       <p className="text-amber-800 text-center mt-5 text-3xl">Food Menu</p>

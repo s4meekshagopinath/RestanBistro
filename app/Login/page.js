@@ -22,7 +22,7 @@ export default function Login(){
       </div>
 
       <div className="h-[300px] md:h-[550px] bg-contain md:w-[1530px]"
-        style={{ backgroundImage:"url('images/menu3.jpg')" }}>
+        style={{ backgroundImage:"url('https://thumbs.dreamstime.com/b/japanese-sushi-beautiful-blooming-orchid-white-background-close-up-horizontal-photo-29988748.jpg')" }}>
 
         <div className="relative flex">
           <div className="h-[80px] pt-5">
@@ -51,7 +51,7 @@ export default function Login(){
         
         <div>
           <img 
-            src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fthumb%2F14.jpg&w=3840&q=75"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4iIrExTDeZlEbiBjGaKwgOqu-Ps2wEw7Onw&s"
             className="h-[500px] md:h-[700px] w-[600px] md:ml-[200px] mt-[50px] object-cover"
           />
         </div>
